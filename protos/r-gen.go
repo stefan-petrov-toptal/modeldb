@@ -15,6 +15,12 @@ var inputFile = flag.String("input", "", "run a database migration")
 var outputFile = flag.String("output", "", "run a database migration")
 var templateFile = flag.String("template", "", "run a database migration")
 
+type Inventory struct {
+	Material string
+	Count    int
+}
+
+//var inp = "{{.Count}} items are made of {{.Material}}"
 func main() {
 	flag.Parse()
 
